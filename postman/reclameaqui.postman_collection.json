@@ -1,0 +1,364 @@
+{
+	"variables": [],
+	"info": {
+		"name": "reclameaqui",
+		"_postman_id": "73d95237-1093-ccff-7d3e-b5155137ec62",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Locale",
+			"request": {
+				"url": "localhost:8080/locale",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"country\":\"Brasil\",\"state\":\"SP\",\"city\":\"Sorocaba\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company",
+			"request": {
+				"url": "localhost:8080/company",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Dell\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Complain",
+			"request": {
+				"url": "localhost:8080/complain",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"This is the Title\", \"description\": \"This is a beautiful description from sp\", \"locale\": {\"id\": \"5c7d0ce0dc43179b9da1a878\"},\"company\": {\"id\": \"5c7d3369dc43179c9669acf6\"}}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Company",
+			"request": {
+				"url": "localhost:8080/companies",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Locale",
+			"request": {
+				"url": "localhost:8080/locales",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Complains",
+			"request": {
+				"url": "localhost:8080/complains",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Complains with City",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/complains?city=Sorocaba&state=SP&country=Brasil",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"complains"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Sorocaba",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "state",
+							"value": "SP",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "country",
+							"value": "Brasil",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku health",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/actuator/health",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Locale Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/locale",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"country\":\"Brasil\",\"state\":\"SP\",\"city\":\"Sorocaba\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/company",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Coca\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Complain Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/complain",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Title Here\", \n\t\"description\": \"This is a description from sorocaba\", \n\t\"locale\": \n\t\t{\"id\": \"5c7d34b850bd2f000432d14a\"},\n\t\"company\": \n\t\t{\"id\": \"5c7d34c450bd2f000432d14c\"}\n\t\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Locale Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/locales",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Company Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/companies",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Complains Heroku",
+			"request": {
+				"url": "https://reclameaqui.herokuapp.com/complains",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Complains Heroku",
+			"request": {
+				"url": {
+					"raw": "https://reclameaqui.herokuapp.com/complains?city=Sorocaba&state=SP&country=Brasil",
+					"protocol": "https",
+					"host": [
+						"reclameaqui",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"complains"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Sorocaba",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "state",
+							"value": "SP",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "country",
+							"value": "Brasil",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pepsi\"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
