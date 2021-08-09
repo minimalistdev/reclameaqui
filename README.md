@@ -20,6 +20,10 @@ There is a Postman file on /postman to import on postman with all calls
 ```
 MONGODB_URI={mongodb://127.0.0.1:27017/db}
 ```
+## Build
+```shell
+./gradlew build
+```
 
 ## Tests
 
